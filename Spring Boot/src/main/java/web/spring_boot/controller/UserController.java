@@ -56,7 +56,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping ("/delete")
+    @PostMapping ("/delete")
     public String deleteUser(@RequestParam("id") int id) {
         userService.removeUserById(id);
         return "redirect:/";

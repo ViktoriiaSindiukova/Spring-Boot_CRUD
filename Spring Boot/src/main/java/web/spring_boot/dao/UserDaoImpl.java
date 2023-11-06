@@ -27,7 +27,7 @@ public class UserDaoImpl implements UserDao {
         if (userRemove.isEmpty()) {
             throw new UserNotFoundException("User with id " + id + " not found.");
         }
-        em.remove(userRemove.get());
+        em.remove(userRemove);
     }
 
     @Override
